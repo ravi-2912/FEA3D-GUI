@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{36526093-EAFE-453F-B800-8EAABBFCB2CD}</ProjectGuid>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>DemoSFLpro</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE110_HOME)\include;$(OGRE110_HOME)\include\OGRE;$(OGRE110_HOME)\include\OGRE\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>$(OGRE110_HOME)\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE110_HOME)\include;$(OGRE110_HOME)\include\OGRE;$(OGRE110_HOME)\include\OGRE\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OgreMain.lib;OgreOverlay.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>$(OGRE110_HOME)\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BendElementControl.cpp" />
+    <ClCompile Include="ColouredRectangle2D.cpp" />
+    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="OgreApp.cpp" />
+    <ClCompile Include="OgreCoordinateAxes.cpp" />
+    <ClCompile Include="OgrePipe.cpp" />
+    <ClCompile Include="OgrePipelineElement.cpp" />
+    <ClCompile Include="PipeElementCtrl.cpp" />
+    <ClCompile Include="PipelineGeometryControl.cpp" />
+    <ClCompile Include="PipelineMaterial.cpp" />
+    <ClCompile Include="PipelineMaterialControl.cpp" />
+    <ClCompile Include="ModelControl.cpp" />
+    <ClCompile Include="PipelineControl.cpp" />
+    <ClCompile Include="ReducerElementControl.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="TrackBall.cpp" />
+    <ClCompile Include="ViewportGrid.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BendElementControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ColouredRectangle2D.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="MainWindow.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="OgreApp.h" />
+    <ClInclude Include="OgreCoordinateAxes.h" />
+    <ClInclude Include="OgrePipe.h" />
+    <ClInclude Include="OgrePipelineElement.h" />
+    <ClInclude Include="PipeElementCtrl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="PipelineGeometryControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="PipelineMaterial.h" />
+    <ClInclude Include="PipelineMaterialControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ModelControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="PipelineControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ReducerElementControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TrackBall.h" />
+    <ClInclude Include="ViewportGrid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BendElementControl.resx">
+      <DependentUpon>BendElementControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipeElementCtrl.resx">
+      <DependentUpon>PipeElementCtrl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipelineGeometryControl.resx">
+      <DependentUpon>PipelineGeometryControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipelineMaterialControl.resx">
+      <DependentUpon>PipelineMaterialControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControl.resx">
+      <DependentUpon>ModelControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipelineControl.resx">
+      <DependentUpon>PipelineControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReducerElementControl.resx">
+      <DependentUpon>ReducerElementControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
